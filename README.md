@@ -527,8 +527,4 @@ TODO
 
 ### 양현서
 
-
-
-Vercel deployment test
-
 TODO
