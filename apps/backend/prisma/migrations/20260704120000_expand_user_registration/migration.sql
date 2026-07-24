@@ -26,6 +26,9 @@ CREATE TABLE "UserInterest" (
   CONSTRAINT "UserInterest_pkey" PRIMARY KEY ("userId", "interestId")
 );
 
+CREATE UNIQUE INDEX "Interest_name_key" ON "Interest"("name");
+CREATE INDEX "UserInterest_interestId_idx" ON "UserInterest"("interestId");
+
 ALTER TABLE "UserInterest"
   ADD CONSTRAINT "UserInterest_userId_fkey"
   FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
